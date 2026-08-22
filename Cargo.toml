@@ -1,16 +1,16 @@
 [package]
 name = "easyhttpmock-vetis-compio"
 version = "0.1.2"
-edition.workspace = true
-authors.workspace = true
-repository.workspace = true
-homepage.workspace = true
-description = "EasyHttpMock adapter for Vetis HTTP server using compio runtime."
+edition = "2021"
+authors = ["Rogerio Araújo <rogerio.araujo@gmail.com>"]
+repository = "https://github.com/ararog/easyhttpmock"
+homepage = "https://github.com/ararog/easyhttpmock"
+description = "EasyHttpMock adapter for Vetis HTTP server using tokio runtime."
 readme = "README.md"
-license.workspace = true
+license = "MIT OR Apache-2.0"
 keywords = ["http", "mock", "testing"]
 publish = true
-rust-version.workspace = true
+rust-version = "1.75.0"
 
 [package.metadata.docs.rs]
 all-features = true
@@ -31,11 +31,11 @@ http3 = ["vetis-compio/http3"]
 rust-tls = ["vetis-compio/rust-tls"]
 
 [dependencies]
-caramelo = { workspace = true }
-easyhttpmock = { workspace = true }
-http = { workspace = true }
-http-body-util = { workspace = true }
-rand = { workspace = true, default-features = false }
+caramelo = { version = "0.1.2" }
+easyhttpmock = { version = ">= 0.1.3" }
+http = "1.5.0"
+http-body-util = "0.1.5"
+rand = { version = "0.10.2", default-features = false }
 compio = { version = "0.19.2", default-features = false, features = ["macros"] }
 vetis-compio = { version = "0.1.0", features = [
   "http1",
@@ -46,7 +46,7 @@ vetis-compio = { version = "0.1.0", features = [
 send_wrapper = "0.6.0"
 
 [dev-dependencies]
-deboa = { workspace = true }
+deboa = { version = ">= 0.1.0" }
 deboa-compio = { version = "0.1.3", default-features = false, features = [
   "http1",
   "http2",
